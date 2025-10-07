@@ -1,7 +1,13 @@
-import Model from "./Model";
+import Pumpkin from "./Pumpkin";
+import Ghost from "./Ghost";
 
 const Scene = () => {
-  return <Model />;
+  return (
+    <>
+      <Pumpkin />;
+      <Ghost />
+    </>
+  );
 };
 
 export default Scene;
