@@ -19,10 +19,10 @@ export const TARGET_POSITION = {
 };
 
 export const CONFIGURATIONS = {
-  small: new Vector3(0, 0.5, 3),
-  landscape: new Vector3(0, 0.5, 3),
-  large: new Vector3(0, 0.5, 3),
-  extraLarge: new Vector3(0, 0, 0.5),
+  small: new Vector3(0, 0.125, 0.5),
+  landscape: new Vector3(0, 0.125, 0.5),
+  large: new Vector3(0, 0.125, 0.5),
+  extraLarge: new Vector3(0, 0.125, 0.5),
 };
 
 export type ScreenSize = {
