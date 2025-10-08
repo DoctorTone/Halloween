@@ -35,10 +35,17 @@ export function Ghost(props: JSX.IntrinsicElements["group"]) {
               castShadow
               receiveShadow
               geometry={nodes.Object_4.geometry}
-              material={materials.Material}
               position={[0, 5.818, 0]}
               scale={1.438}
-            />
+            >
+              <meshStandardMaterial
+                color="#ffffff"
+                transparent
+                opacity={0.5}
+                emissive="#99aaff"
+                emissiveIntensity={0}
+              />
+            </mesh>
             <mesh
               castShadow
               receiveShadow
