@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 
 export function Ghost(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF(
-    "./models/ghost2.glb"
+    "./models/ghost.glb"
   ) as unknown as GLTFResult;
   return (
     <Float>
@@ -46,7 +46,7 @@ export function Ghost(props: JSX.IntrinsicElements["group"]) {
           <meshStandardMaterial
             color="#ffffff"
             transparent
-            opacity={0.6}
+            opacity={0.5}
             emissive="#99aaff"
             emissiveIntensity={0}
           />
@@ -56,4 +56,4 @@ export function Ghost(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("./models/ghost2.glb");
+useGLTF.preload("./models/ghost.glb");
