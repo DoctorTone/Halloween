@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { INTERACTIONS, TARGET_POSITION } from "./state/Config";
-import DaySky from "./components/DaySky";
 import Lights from "./components/Lights";
 import ResponsiveCamera from "./components/ResponsiveCamera";
 import Scene from "./components/Scene";
@@ -13,7 +12,6 @@ function App() {
       <Canvas camera={{ fov: 60 }}>
         <ResponsiveCamera />
         <Lights />
-        {/* <DaySky /> */}
         <Scene />
         <OrbitControls
           makeDefault
