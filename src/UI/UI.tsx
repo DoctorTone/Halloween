@@ -5,9 +5,9 @@ import Info from "./Info";
 const UI = () => {
   return (
     <>
-      <Copyright />
-      <Controls />
-      <Info />
+      {/* <Copyright /> */}
+      {/* <Controls /> */}
+      {/* <Info /> */}
     </>
   );
 };

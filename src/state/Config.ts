@@ -14,7 +14,7 @@ export const INTERACTIONS = {
 
 export const TARGET_POSITION = {
   X: 0,
-  Y: 0,
+  Y: 0.15,
   Z: 0,
 };
 
@@ -22,7 +22,7 @@ export const CONFIGURATIONS = {
   small: new Vector3(0, 0.125, 0.5),
   landscape: new Vector3(0, 0.125, 0.5),
   large: new Vector3(0, 0.125, 0.5),
-  extraLarge: new Vector3(0, 0.125, 0.5),
+  extraLarge: new Vector3(0, 0.2, 0.5),
 };
 
 export type ScreenSize = {
