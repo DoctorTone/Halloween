@@ -25,6 +25,10 @@ export const CONFIGURATIONS = {
   extraLarge: new Vector3(0, 0.2, 0.5),
 };
 
+export const POSITIONS = {
+  CRYPT: new Vector3(-0.4, 0, -1.25),
+};
+
 export type ScreenSize = {
   width: number;
   height: number;

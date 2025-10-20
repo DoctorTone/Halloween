@@ -10,7 +10,7 @@ import UI from "./UI/UI";
 function App() {
   return (
     <>
-      <Canvas>
+      <Canvas camera={{ fov: 60 }}>
         <ResponsiveCamera />
         <Lights />
         {/* <DaySky /> */}
