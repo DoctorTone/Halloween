@@ -1,18 +1,19 @@
+import { BrowserRouter } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { INTERACTIONS, TARGET_POSITION } from "./state/Config";
 import Lights from "./components/Lights";
-import ResponsiveCamera from "./components/ResponsiveCamera";
-import Scene from "./components/Scene";
+import SceneSwitcher from "./components/SceneSwitcher";
 import UI from "./UI/UI";
+import ResponsiveCamera from "./components/ResponsiveCamera";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Canvas camera={{ fov: 60 }}>
         <ResponsiveCamera />
         <Lights />
-        <Scene />
+        <SceneSwitcher />
         <OrbitControls
           makeDefault
           enablePan={INTERACTIONS.PAN}
@@ -24,7 +25,7 @@ function App() {
         />
       </Canvas>
       <UI />
-    </>
+    </BrowserRouter>
   );
 }
 

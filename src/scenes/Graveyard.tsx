@@ -1,14 +1,14 @@
-import Pumpkin from "./Pumpkin";
-import { Ghost } from "./Ghost";
-import MoonLight from "./MoonLight";
-import Crypt from "./Crypt";
+import Pumpkin from "../components/Pumpkin";
+import { Ghost } from "../components/Ghost";
+import MoonLight from "../components/MoonLight";
+import Crypt from "../components/Crypt";
 import { POSITIONS } from "../state/Config";
 import { Environment } from "@react-three/drei";
-import MoonSpot from "./MoonSpot";
-import PostLantern from "./PostLantern";
-import Graves from "./Grave";
+import MoonSpot from "../components/MoonSpot";
+import PostLantern from "../components/PostLantern";
+import Graves from "../components/Grave";
 
-const Scene = () => {
+const Graveyard = () => {
   return (
     <>
       <Environment preset="night" environmentIntensity={0.25} />
@@ -28,4 +28,4 @@ const Scene = () => {
   );
 };
 
-export default Scene;
+export default Graveyard;
