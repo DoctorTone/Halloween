@@ -1,14 +1,18 @@
 import { useGLTF, Clone } from "@react-three/drei";
-import type { JSX } from "react";
 
-const Graves = (props: JSX.IntrinsicElements["group"]) => {
+const Graves = () => {
   const { scene } = useGLTF("./models/graveDestroyed.glb");
 
   return (
-    <group {...props} dispose={null}>
-      <primitive object={scene} />
-      <Clone position-x={-5} object={scene} />
-      <Clone position-x={-17} object={scene} />
+    <group>
+      <Clone scale={0.15} position={[1, 0, -1]} object={scene} />
+      <Clone scale={0.15} position={[0.25, 0, -1]} object={scene} />
+      <Clone
+        scale={0.15}
+        position={[-1.4, 0, -1.75]}
+        rotation-y={0}
+        object={scene}
+      />
     </group>
   );
 };

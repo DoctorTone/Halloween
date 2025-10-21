@@ -23,7 +23,7 @@ const Scene = () => {
         rotation-y={Math.PI / 3.5}
       />
       <PostLantern position={POSITIONS.LANTERN} scale={0.2} />
-      <Graves position={POSITIONS.GRAVE1} scale={0.15} />
+      <Graves />
     </>
   );
 };
