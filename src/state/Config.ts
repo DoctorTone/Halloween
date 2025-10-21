@@ -28,6 +28,7 @@ export const CONFIGURATIONS = {
 export const POSITIONS = {
   CRYPT: new Vector3(-0.4, 0, -1.25),
   MOON: new Vector3(1.5, 1, -1),
+  LANTERN: new Vector3(0.75, 0, -1),
 };
 
 export type ScreenSize = {

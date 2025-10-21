@@ -5,6 +5,7 @@ import Crypt from "./Crypt";
 import { POSITIONS } from "../state/Config";
 import { Environment } from "@react-three/drei";
 import MoonSpot from "./MoonSpot";
+import PostLantern from "./PostLantern";
 
 const Scene = () => {
   return (
@@ -20,6 +21,7 @@ const Scene = () => {
         position={POSITIONS.CRYPT}
         rotation-y={Math.PI / 3.5}
       />
+      <PostLantern position={POSITIONS.LANTERN} scale={0.2} />
     </>
   );
 };
