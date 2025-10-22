@@ -8,7 +8,7 @@ const BusinessUI = () => {
   return (
     <div id="business" className="panel">
       <Typography variant="h5">
-        Want to see more?
+        What about pumpkins?
         <IconButton onClick={() => navigate("/pumpkin")}>
           <ForwardIcon fontSize="large" color="warning" />
         </IconButton>

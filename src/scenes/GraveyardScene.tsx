@@ -7,10 +7,14 @@ import { Environment } from "@react-three/drei";
 import MoonSpot from "../components/MoonSpot";
 import PostLantern from "../components/PostLantern";
 import Graves from "../components/Grave";
+import ResponsiveCamera from "../components/ResponsiveCamera";
+import Lights from "../components/Lights";
 
 const GraveyardScene = () => {
   return (
     <>
+      <ResponsiveCamera scene="Graveyard" />
+      <Lights />
       <Environment preset="night" environmentIntensity={0.25} />
       <MoonLight />
       <MoonSpot position={POSITIONS.MOON} />

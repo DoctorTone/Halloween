@@ -1,31 +1,45 @@
-import { RESOLUTIONS, CONFIGURATIONS } from "../state/Config";
+import { Vector3 } from "three";
+import { RESOLUTIONS, GRAVEYARD_CONFIGURATIONS } from "../state/Config";
 
-export const getScreenConfiguration = (width: number, height: number) => {
-  // Small screens
-  if (width <= RESOLUTIONS.SMALL) {
-    return CONFIGURATIONS["small"];
+export const getScreenConfiguration = (
+  scene: string,
+  width: number,
+  height: number
+) => {
+  switch (scene) {
+    case "Graveyard":
+      {
+        // Small screens
+        if (width <= RESOLUTIONS.SMALL) {
+          return GRAVEYARD_CONFIGURATIONS["small"];
+        }
+
+        // Phone in landscape
+        if (width <= RESOLUTIONS.MEDIUM && width > height) {
+          return GRAVEYARD_CONFIGURATIONS["landscape"];
+        }
+
+        if (width <= RESOLUTIONS.LARGE && width > height) {
+          return GRAVEYARD_CONFIGURATIONS["large"];
+        }
+
+        // if (width <= RESOLUTIONS.LARGE) {
+        //   return GRAVEYARD_CONFIGURATIONS["large"];
+        // }
+
+        // if (width <= RESOLUTIONS.X_LARGE) {
+        //   return GRAVEYARD_CONFIGURATIONS[CONFIG_TYPE.TABLET];
+        // }
+
+        if (width >= RESOLUTIONS.X_LARGE) {
+          return GRAVEYARD_CONFIGURATIONS["extraLarge"];
+        }
+
+        return GRAVEYARD_CONFIGURATIONS["small"];
+      }
+      break;
+
+    default:
+      return new Vector3();
   }
-
-  // Phone in landscape
-  if (width <= RESOLUTIONS.MEDIUM && width > height) {
-    return CONFIGURATIONS["landscape"];
-  }
-
-  if (width <= RESOLUTIONS.LARGE && width > height) {
-    return CONFIGURATIONS["large"];
-  }
-
-  // if (width <= RESOLUTIONS.LARGE) {
-  //   return CONFIGURATIONS["large"];
-  // }
-
-  // if (width <= RESOLUTIONS.X_LARGE) {
-  //   return CONFIGURATIONS[CONFIG_TYPE.TABLET];
-  // }
-
-  if (width >= RESOLUTIONS.X_LARGE) {
-    return CONFIGURATIONS["extraLarge"];
-  }
-
-  return CONFIGURATIONS["small"];
 };

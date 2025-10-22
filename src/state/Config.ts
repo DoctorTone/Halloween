@@ -18,11 +18,15 @@ export const TARGET_POSITION = {
   Z: 0,
 };
 
-export const CONFIGURATIONS = {
+export const GRAVEYARD_CONFIGURATIONS = {
   small: new Vector3(0, 0.125, 0.5),
   landscape: new Vector3(0, 0.125, 0.5),
   large: new Vector3(0, 0.125, 0.5),
   extraLarge: new Vector3(-0.25, 0.2, 0.75),
+};
+
+export const BUSINESS_CONFIGURATIONS = {
+  extraLarge: new Vector3(0, 0.2, 0.75),
 };
 
 export const POSITIONS = {

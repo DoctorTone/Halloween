@@ -3,7 +3,11 @@ import { useThree } from "@react-three/fiber";
 import { getScreenConfiguration } from "../Utils/utils";
 import useStore from "../state/store";
 
-const ResponsiveCamera = () => {
+interface ResponsiveProps {
+  scene: string;
+}
+
+const ResponsiveCamera = ({ scene }: ResponsiveProps) => {
   const screenSize = useStore((state) => state.screenSize);
   const setScreenSize = useStore((state) => state.setScreenSize);
 
@@ -20,6 +24,7 @@ const ResponsiveCamera = () => {
 
   useEffect(() => {
     const configuration = getScreenConfiguration(
+      scene,
       screenSize.width,
       screenSize.height
     );

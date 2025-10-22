@@ -1,13 +1,18 @@
-import { useGLTF, Clone } from "@react-three/drei";
+import { useGLTF, Clone, Environment } from "@react-three/drei";
+import ResponsiveCamera from "../components/ResponsiveCamera";
+import Lights from "../components/Lights";
 
 const BusinessScene = () => {
   const { scene } = useGLTF("./models/candy.gltf");
 
   return (
-    <group>
+    <>
+      <ResponsiveCamera scene="Business" />
+      <Lights />
+      <Environment preset="night" environmentIntensity={0.25} />
       <Clone position={[1, 0, -2]} object={scene} />
       <Clone scale={0.4} position={[-1, 0, -2]} object={scene} />
-    </group>
+    </>
   );
 };
 

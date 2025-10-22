@@ -1,7 +1,7 @@
 import Copyright from "../UI/Copyright";
 import Controls from "./Controls";
 import Info from "./Info";
-import Enter from "./Enter";
+import Enter from "./GraveyardUI";
 
 const UI = () => {
   return (
