@@ -7,9 +7,11 @@ const Lights = () => {
   useEffect(() => {
     if (!lightRef.current) return;
 
-    setInterval(() => {
+    const intervalID = setInterval(() => {
       lightRef.current!.intensity = Math.random() / 50;
     }, 100);
+
+    return () => clearInterval(intervalID);
   }, []);
 
   return (

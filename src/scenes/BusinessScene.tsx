@@ -9,10 +9,11 @@ const BusinessScene = () => {
   const candyRef = useRef<Group>(null);
   const gltf = useGLTF("./models/candyCentre.glb");
   const { scene } = useThree();
+  let elapsedTime = 0;
 
-  useFrame((state) => {
-    const time = state.clock.getElapsedTime();
-    let candyScale = SCALES.CANDY_START + time / SCALES.CANDY_RATE;
+  useFrame((state, delta) => {
+    elapsedTime += delta;
+    let candyScale = SCALES.CANDY_START + elapsedTime / SCALES.CANDY_RATE;
     if (candyScale >= SCALES.CANDY_MAX) {
       candyScale = SCALES.CANDY_MAX;
     }
