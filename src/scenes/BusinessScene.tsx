@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { useGLTF, Clone, Stage } from "@react-three/drei";
+import { useGLTF, Clone, Stage, Text } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import ResponsiveCamera from "../components/ResponsiveCamera";
 import { Color, type Group } from "three";
@@ -28,14 +28,20 @@ const BusinessScene = () => {
   return (
     <>
       <ResponsiveCamera scene="Business" />
-      <Stage adjustCamera={1} environment={"night"} shadows={"contact"}>
-        <Clone ref={candyRef} position={[1, -1, -2]} object={gltf.scene} />
+      <Stage adjustCamera={1.3} environment={"night"} shadows={"contact"}>
+        <Clone ref={candyRef} position={[1.25, -1, -2]} object={gltf.scene} />
         <Clone
           scale={SCALES.CANDY_START}
-          position={[-1, -1, -2]}
+          position={[-1.25, -1, -2]}
           object={gltf.scene}
         />
       </Stage>
+      <Text position={[1.1, -0.6, 0.6]} fontSize={0.15} color="white">
+        US
+      </Text>
+      <Text position={[-1.35, -0.6, 0.6]} fontSize={0.15} color="white">
+        UK
+      </Text>
     </>
   );
 };

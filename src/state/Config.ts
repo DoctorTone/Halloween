@@ -40,8 +40,8 @@ export const POSITIONS = {
 
 export const SCALES = {
   CANDY_START: 0.5,
-  CANDY_RATE: 10,
-  CANDY_MAX: 2,
+  CANDY_RATE: 5,
+  CANDY_MAX: 1.97,
 };
 
 export type ScreenSize = {
