@@ -7,16 +7,9 @@ import UISwitcher from "./UI/UISwitcher";
 import useStore from "./state/store";
 
 function App() {
-  const currentScene = useStore((state) => state.currentScene);
-
   return (
     <BrowserRouter>
-      <Canvas
-        camera={{ fov: 60 }}
-        style={{
-          background: currentScene === "graveyard" ? "black" : "#2d2e2d",
-        }}
-      >
+      <Canvas camera={{ fov: 60 }}>
         <SceneSwitcher />
         <OrbitControls
           makeDefault
