@@ -13,7 +13,9 @@ function App() {
     <BrowserRouter>
       <Canvas
         camera={{ fov: 60 }}
-        style={{ background: currentScene === "graveyard" ? "black" : "grey" }}
+        style={{
+          background: currentScene === "graveyard" ? "black" : "#2d2e2d",
+        }}
       >
         <SceneSwitcher />
         <OrbitControls

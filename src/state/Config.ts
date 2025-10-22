@@ -26,15 +26,16 @@ export const GRAVEYARD_CONFIGURATIONS = {
 };
 
 export const BUSINESS_CONFIGURATIONS = {
-  extraLarge: new Vector3(0, 0.2, 0.75),
+  small: new Vector3(0, 0.125, 0.5),
+  landscape: new Vector3(0, 0.125, 0.5),
+  large: new Vector3(0, 0.125, 0.5),
+  extraLarge: new Vector3(0, 0.2, 1),
 };
 
 export const POSITIONS = {
   CRYPT: new Vector3(-0.4, 0, -1.25),
   MOON: new Vector3(1.5, 1, -1),
   LANTERN: new Vector3(0.4, 0, -1.25),
-  GRAVE1: new Vector3(1.25, 0, -1),
-  GRAVE2: new Vector3(-1.25, 0, -1),
 };
 
 export type ScreenSize = {
