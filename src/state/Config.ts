@@ -38,6 +38,12 @@ export const POSITIONS = {
   LANTERN: new Vector3(0.4, 0, -1.25),
 };
 
+export const SCALES = {
+  CANDY_START: 0.5,
+  CANDY_RATE: 10,
+  CANDY_MAX: 2,
+};
+
 export type ScreenSize = {
   width: number;
   height: number;
