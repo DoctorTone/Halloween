@@ -6,6 +6,8 @@ type FrameworkState = {
   setScreenSize: (size: ScreenSize) => void;
   infoDialogOpen: boolean;
   setShowInfoDialog: (status: boolean) => void;
+  currentScene: string;
+  setCurrentScene: (sceneName: string) => void;
 };
 
 const useStore = create<FrameworkState>((set) => ({
@@ -14,6 +16,8 @@ const useStore = create<FrameworkState>((set) => ({
     set((state) => ({ screenSize: { ...state.screenSize, ...size } })),
   infoDialogOpen: false,
   setShowInfoDialog: (status) => set(() => ({ infoDialogOpen: status })),
+  currentScene: "graveyard",
+  setCurrentScene: (sceneName) => set(() => ({ currentScene: sceneName })),
 }));
 
 export default useStore;

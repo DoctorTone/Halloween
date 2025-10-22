@@ -4,11 +4,17 @@ import { OrbitControls } from "@react-three/drei";
 import { INTERACTIONS, TARGET_POSITION } from "./state/Config";
 import SceneSwitcher from "./components/SceneSwitcher";
 import UISwitcher from "./UI/UISwitcher";
+import useStore from "./state/store";
 
 function App() {
+  const currentScene = useStore((state) => state.currentScene);
+
   return (
     <BrowserRouter>
-      <Canvas camera={{ fov: 60 }}>
+      <Canvas
+        camera={{ fov: 60 }}
+        style={{ background: currentScene === "graveyard" ? "black" : "grey" }}
+      >
         <SceneSwitcher />
         <OrbitControls
           makeDefault
