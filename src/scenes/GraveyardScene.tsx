@@ -8,7 +8,7 @@ import MoonSpot from "../components/MoonSpot";
 import PostLantern from "../components/PostLantern";
 import Graves from "../components/Grave";
 
-const Graveyard = () => {
+const GraveyardScene = () => {
   return (
     <>
       <Environment preset="night" environmentIntensity={0.25} />
@@ -28,4 +28,4 @@ const Graveyard = () => {
   );
 };
 
-export default Graveyard;
+export default GraveyardScene;

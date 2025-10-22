@@ -9,7 +9,7 @@ const BusinessUI = () => {
     <div id="business" className="panel">
       <Typography variant="h5">
         Want to see more?
-        <IconButton onClick={() => navigate("/business")}>
+        <IconButton onClick={() => navigate("/pumpkin")}>
           <ForwardIcon fontSize="large" color="warning" />
         </IconButton>
       </Typography>

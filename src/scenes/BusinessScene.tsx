@@ -1,6 +1,6 @@
 import { useGLTF, Clone } from "@react-three/drei";
 
-const Business = () => {
+const BusinessScene = () => {
   const { scene } = useGLTF("./models/candy.gltf");
 
   return (
@@ -11,6 +11,6 @@ const Business = () => {
   );
 };
 
-export default Business;
+export default BusinessScene;
 
 useGLTF.preload("./models/candy.gltf");
