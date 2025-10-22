@@ -14,7 +14,7 @@ export const INTERACTIONS = {
 
 export const TARGET_POSITION = {
   X: 0,
-  Y: 0.15,
+  Y: 0,
   Z: 0,
 };
 
@@ -36,7 +36,7 @@ export const PUMPKIN_CONFIGURATIONS = {
   small: new Vector3(0, 0.125, 0.5),
   landscape: new Vector3(0, 0.125, 0.5),
   large: new Vector3(0, 0.125, 0.5),
-  extraLarge: new Vector3(0, 0.25, 1),
+  extraLarge: new Vector3(0, 2, 4.5),
 };
 
 export const POSITIONS = {
