@@ -36,11 +36,17 @@ const BusinessScene = () => {
           object={gltf.scene}
         />
       </Stage>
-      <Text position={[1.1, -0.6, 0.6]} fontSize={0.15} color="white">
+      <Text position={[1.1, -0.65, 0.6]} fontSize={0.15} color="white">
         US
       </Text>
-      <Text position={[-1.35, -0.6, 0.6]} fontSize={0.15} color="white">
+      <Text position={[-1.35, -0.65, 0.6]} fontSize={0.15} color="white">
         UK
+      </Text>
+      <Text position={[-1.35, 0.15, 0]} fontSize={0.125} color="white">
+        £1.2B
+      </Text>
+      <Text position={[1.1, 2, 0]} fontSize={0.125} color="white">
+        $12.2B
       </Text>
     </>
   );
