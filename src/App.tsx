@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import { INTERACTIONS, TARGET_POSITION } from "./state/Config";
 import Lights from "./components/Lights";
 import SceneSwitcher from "./components/SceneSwitcher";
-import UI from "./UI/UI";
+import UISwitcher from "./UI/UISwitcher";
 import ResponsiveCamera from "./components/ResponsiveCamera";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           target={[TARGET_POSITION.X, TARGET_POSITION.Y, TARGET_POSITION.Z]}
         />
       </Canvas>
-      <UI />
+      <UISwitcher />
     </BrowserRouter>
   );
 }
