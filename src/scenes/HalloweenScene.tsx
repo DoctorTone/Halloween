@@ -5,8 +5,6 @@ import { Color, Group } from "three";
 import ResponsiveCamera from "../components/ResponsiveCamera";
 import { ARROW } from "../state/Config";
 
-const SPEED = 10;
-
 const HalloweenScene = () => {
   const gltfs = useGLTF([
     "./models/michael_myers.glb",
@@ -17,6 +15,9 @@ const HalloweenScene = () => {
   ]);
   const { scene } = useThree();
   const arrowRef = useRef<Group>(null);
+  const mediumRef = useRef<Group>(null);
+  const maximumRef = useRef<Group>(null);
+  const phaseRef = useRef(0);
   let elapsedTime = 0;
 
   useEffect(() => {
@@ -26,9 +27,41 @@ const HalloweenScene = () => {
   useFrame((_, delta) => {
     elapsedTime += delta;
     if (arrowRef.current) {
-      arrowRef.current.position.x += delta * SPEED;
-      if (arrowRef.current.position.x >= ARROW.MAX_FIRST) {
-        arrowRef.current.position.x = ARROW.START;
+      arrowRef.current.position.x += delta * ARROW.SPEED;
+      if (elapsedTime >= ARROW.PHASE1_TIME) {
+        phaseRef.current = 1;
+      }
+      if (elapsedTime >= ARROW.PHASE2_TIME) {
+        phaseRef.current = 2;
+      }
+
+      switch (phaseRef.current) {
+        case 0:
+          {
+            if (arrowRef.current.position.x >= ARROW.MAX_FIRST) {
+              arrowRef.current.position.x = ARROW.START;
+            }
+          }
+          break;
+
+        case 1:
+          {
+            mediumRef.current!.visible = true;
+            if (arrowRef.current.position.x >= ARROW.MAX_SECOND) {
+              arrowRef.current.position.x = ARROW.START_SECOND;
+            }
+          }
+          break;
+
+        case 2:
+          {
+            maximumRef.current!.visible = true;
+            arrowRef.current.visible = false;
+          }
+          break;
+
+        default:
+          break;
       }
     }
   });
@@ -52,13 +85,13 @@ const HalloweenScene = () => {
         <Text position={[-30, 1.5, 0]} fontSize={1} color="orange">
           $300K
         </Text>
-        <group visible={false}>
+        <group ref={mediumRef} visible={false}>
           <primitive scale={3.5} position={[0, 0, 0]} object={gltfs[2].scene} />
           <Text position={[0, 2, 0]} fontSize={1} color="orange">
             $47M
           </Text>
         </group>
-        <group visible={false}>
+        <group ref={maximumRef} visible={false}>
           <primitive scale={10} position={[30, 0, 0]} object={gltfs[3].scene} />
           <Text position={[30, 6, 0]} fontSize={1} color="orange">
             {`>$150M`}

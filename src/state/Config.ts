@@ -60,8 +60,12 @@ export const SCALES = {
 
 export const ARROW = {
   START: -22.5,
-  MAX_FIRST: -10,
-  MAX_SECOND: 20,
+  START_SECOND: 10,
+  MAX_FIRST: -14,
+  MAX_SECOND: 17.5,
+  PHASE1_TIME: 5,
+  PHASE2_TIME: 15,
+  SPEED: 7.5,
 };
 
 export type ScreenSize = {
