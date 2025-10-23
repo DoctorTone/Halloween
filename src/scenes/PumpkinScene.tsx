@@ -1,12 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, Clone, Stage, Text, Shadow } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
-import { Color } from "three";
+import { useThree, useFrame } from "@react-three/fiber";
+import { Color, Group } from "three";
 import ResponsiveCamera from "../components/ResponsiveCamera";
 
 const PumpkinScene = () => {
   const gltf = useGLTF("./models/pumpkinKit.glb");
   const { scene } = useThree();
+  const pumpkinRef = useRef<Group>(null);
+
+  useFrame((_, delta) => {
+    if (pumpkinRef.current) {
+      pumpkinRef.current.position.y -= delta * 2;
+      if (pumpkinRef.current.position.y <= -1) {
+        pumpkinRef.current.position.y = -1;
+      }
+    }
+  });
 
   useEffect(() => {
     scene.background = new Color().setHex(0x2d2d2d);
@@ -28,7 +38,7 @@ const PumpkinScene = () => {
           </Text>
           <Shadow scale={0.4} color={"black"} colorStop={0.3} opacity={0.75} />
         </group>
-        <group position={[2, -1, -0.5]}>
+        <group ref={pumpkinRef} position={[2, 4, -0.5]}>
           <Text position={[0, 3.25, 0]} fontSize={0.15} color="white">
             2749lbs
           </Text>
