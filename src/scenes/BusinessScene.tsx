@@ -5,6 +5,7 @@ import ResponsiveCamera from "../components/ResponsiveCamera";
 import { Color, type Group } from "three";
 import { SCALES } from "../state/Config";
 
+const DELAY = 4;
 const BusinessScene = () => {
   const candyRef = useRef<Group>(null);
   const gltf = useGLTF("./models/candyCentre.glb");
@@ -13,7 +14,10 @@ const BusinessScene = () => {
 
   useFrame((state, delta) => {
     elapsedTime += delta;
-    let candyScale = SCALES.CANDY_START + elapsedTime / SCALES.CANDY_RATE;
+    if (elapsedTime < DELAY) return;
+
+    let candyScale =
+      SCALES.CANDY_START + (elapsedTime - DELAY) / SCALES.CANDY_RATE;
     if (candyScale >= SCALES.CANDY_MAX) {
       candyScale = SCALES.CANDY_MAX;
     }
@@ -30,7 +34,12 @@ const BusinessScene = () => {
     <>
       <ResponsiveCamera scene="Business" />
       <Stage adjustCamera={1.3} environment={"night"} shadows={"contact"}>
-        <Clone ref={candyRef} position={[1.25, -1, -2]} object={gltf.scene} />
+        <Clone
+          scale={SCALES.CANDY_START}
+          ref={candyRef}
+          position={[1.25, -1, -2]}
+          object={gltf.scene}
+        />
         <Clone
           scale={SCALES.CANDY_START}
           position={[-1.25, -1, -2]}
