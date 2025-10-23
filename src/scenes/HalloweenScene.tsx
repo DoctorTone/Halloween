@@ -27,9 +27,10 @@ const HalloweenScene = () => {
         shadows={"contact"}
       >
         <primitive
-          scale={0.05}
-          position={[-10, 0, 20]}
+          scale={0.06}
+          position={[22.5, -4.75, 11]}
           object={gltfs[0].scene}
+          rotation-y={-Math.PI / 8}
         />
         <primitive scale={0.4} position={[-30, 0, 0]} object={gltfs[1].scene} />
         <primitive scale={3.5} position={[0, 0, 0]} object={gltfs[2].scene} />
