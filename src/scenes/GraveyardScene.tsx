@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useThree } from "@react-three/fiber";
 import Pumpkin from "../components/Pumpkin";
 import { Ghost } from "../components/Ghost";
 import MoonLight from "../components/MoonLight";
@@ -8,9 +10,16 @@ import MoonSpot from "../components/MoonSpot";
 import PostLantern from "../components/PostLantern";
 import Graves from "../components/Grave";
 import ResponsiveCamera from "../components/ResponsiveCamera";
+import { Color } from "three";
 import Lights from "../components/Lights";
 
 const GraveyardScene = () => {
+  const { scene } = useThree();
+
+  useEffect(() => {
+    scene.background = new Color().setHex(0x000000);
+  }, []);
+
   return (
     <>
       <ResponsiveCamera scene="Graveyard" />
