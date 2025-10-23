@@ -22,7 +22,7 @@ const MoonSpot = (props: JSX.IntrinsicElements["group"]) => {
         intensity={1}
       />
       <Box
-        args={[3, 1.75, 3]}
+        args={[3, 1.75, 2.75]}
         rotation-x={-Math.PI / 2}
         position={[-1.5, -2.5, 0]}
       >

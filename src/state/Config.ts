@@ -14,7 +14,7 @@ export const INTERACTIONS = {
 
 export const TARGET_POSITION = {
   X: 0,
-  Y: 0,
+  Y: 0.1,
   Z: 0,
 };
 
@@ -36,7 +36,7 @@ export const PUMPKIN_CONFIGURATIONS = {
   small: new Vector3(0, 0.125, 0.5),
   landscape: new Vector3(0, 0.125, 0.5),
   large: new Vector3(0, 0.125, 0.5),
-  extraLarge: new Vector3(0, 2, 4.5),
+  extraLarge: new Vector3(0, 2.5, 4.5),
 };
 
 export const HALLOWEEN_CONFIGURATIONS = {
@@ -55,7 +55,7 @@ export const POSITIONS = {
 export const SCALES = {
   CANDY_START: 0.5,
   CANDY_RATE: 5,
-  CANDY_MAX: 1.97,
+  CANDY_MAX: 1.8,
 };
 
 export const ARROW = {

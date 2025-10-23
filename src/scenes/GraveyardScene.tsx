@@ -9,6 +9,7 @@ import { Environment } from "@react-three/drei";
 import MoonSpot from "../components/MoonSpot";
 import PostLantern from "../components/PostLantern";
 import Graves from "../components/Grave";
+import GraveMarker from "../components/GraveMarker";
 import ResponsiveCamera from "../components/ResponsiveCamera";
 import { Color } from "three";
 import Lights from "../components/Lights";
@@ -37,6 +38,7 @@ const GraveyardScene = () => {
       />
       <PostLantern position={POSITIONS.LANTERN} scale={0.2} />
       <Graves />
+      <GraveMarker />
     </>
   );
 };

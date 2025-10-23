@@ -5,12 +5,11 @@ const Graves = () => {
 
   return (
     <group>
-      <Clone scale={0.15} position={[1, 0, -1]} object={scene} />
-      <Clone scale={0.15} position={[0.25, 0, -1]} object={scene} />
+      <Clone scale={0.15} position={[0.75, 0, -0.5]} object={scene} />
       <Clone
         scale={0.15}
-        position={[-1.4, 0, -1.75]}
-        rotation-y={0}
+        position={[0.65, 0, -0.85]}
+        rotation-y={-Math.PI / 8}
         object={scene}
       />
     </group>
