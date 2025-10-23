@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useGLTF, Stage, Text } from "@react-three/drei";
+import { useGLTF, Stage, Text, useAnimations } from "@react-three/drei";
 import { useThree, useFrame } from "@react-three/fiber";
 import { Color, Group } from "three";
 import ResponsiveCamera from "../components/ResponsiveCamera";
@@ -13,6 +13,7 @@ const HalloweenScene = () => {
     "./models/stashed_dollars.glb",
     "./models/direction_arrow_orange.glb",
   ]);
+  const { ref, actions } = useAnimations(gltfs[0].animations);
   const { scene } = useThree();
   const arrowRef = useRef<Group>(null);
   const mediumRef = useRef<Group>(null);
@@ -22,6 +23,7 @@ const HalloweenScene = () => {
 
   useEffect(() => {
     scene.background = new Color().setHex(0x2d2d2d);
+    actions["C4D Animation Take"]!.play();
   }, []);
 
   useFrame((_, delta) => {
@@ -76,6 +78,7 @@ const HalloweenScene = () => {
         shadows={"contact"}
       >
         <primitive
+          ref={ref}
           scale={0.06}
           position={[22.5, -4, 11]}
           object={gltfs[0].scene}
