@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, Stage, Text } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
-import { Color } from "three";
+import { useThree, useFrame } from "@react-three/fiber";
+import { Color, Group } from "three";
 import ResponsiveCamera from "../components/ResponsiveCamera";
+import { ARROW } from "../state/Config";
+
+const SPEED = 10;
 
 const HalloweenScene = () => {
   const gltfs = useGLTF([
@@ -13,10 +16,22 @@ const HalloweenScene = () => {
     "./models/direction_arrow_orange.glb",
   ]);
   const { scene } = useThree();
+  const arrowRef = useRef<Group>(null);
+  let elapsedTime = 0;
 
   useEffect(() => {
     scene.background = new Color().setHex(0x2d2d2d);
   }, []);
+
+  useFrame((_, delta) => {
+    elapsedTime += delta;
+    if (arrowRef.current) {
+      arrowRef.current.position.x += delta * SPEED;
+      if (arrowRef.current.position.x >= ARROW.MAX_FIRST) {
+        arrowRef.current.position.x = ARROW.START;
+      }
+    }
+  });
 
   return (
     <>
@@ -50,6 +65,7 @@ const HalloweenScene = () => {
           </Text>
         </group>
         <primitive
+          ref={arrowRef}
           scale={1.2}
           position={[-22.5, 0, 0]}
           object={gltfs[4].scene}

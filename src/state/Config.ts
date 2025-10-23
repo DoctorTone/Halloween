@@ -58,6 +58,12 @@ export const SCALES = {
   CANDY_MAX: 1.97,
 };
 
+export const ARROW = {
+  START: -22.5,
+  MAX_FIRST: -10,
+  MAX_SECOND: 20,
+};
+
 export type ScreenSize = {
   width: number;
   height: number;
