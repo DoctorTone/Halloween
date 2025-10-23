@@ -9,7 +9,7 @@ const PumpkinUI = () => {
     <div id="pumpkin" className="panel">
       <Typography variant="h5">
         End?
-        <IconButton onClick={() => navigate("/")}>
+        <IconButton onClick={() => navigate("/halloween")}>
           <ForwardIcon fontSize="large" color="warning" />
         </IconButton>
       </Typography>

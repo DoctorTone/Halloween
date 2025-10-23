@@ -4,6 +4,7 @@ import {
   GRAVEYARD_CONFIGURATIONS,
   BUSINESS_CONFIGURATIONS,
   PUMPKIN_CONFIGURATIONS,
+  HALLOWEEN_CONFIGURATIONS,
 } from "../state/Config";
 
 export const getScreenConfiguration = (
@@ -105,6 +106,38 @@ export const getScreenConfiguration = (
         }
 
         return PUMPKIN_CONFIGURATIONS["small"];
+      }
+      break;
+
+    case "Halloween":
+      {
+        // Small screens
+        if (width <= RESOLUTIONS.SMALL) {
+          return HALLOWEEN_CONFIGURATIONS["small"];
+        }
+
+        // Phone in landscape
+        if (width <= RESOLUTIONS.MEDIUM && width > height) {
+          return HALLOWEEN_CONFIGURATIONS["landscape"];
+        }
+
+        if (width <= RESOLUTIONS.LARGE && width > height) {
+          return HALLOWEEN_CONFIGURATIONS["large"];
+        }
+
+        // if (width <= RESOLUTIONS.LARGE) {
+        //   return HALLOWEEN_CONFIGURATIONS["large"];
+        // }
+
+        // if (width <= RESOLUTIONS.X_LARGE) {
+        //   return HALLOWEEN_CONFIGURATIONS[CONFIG_TYPE.TABLET];
+        // }
+
+        if (width >= RESOLUTIONS.X_LARGE) {
+          return HALLOWEEN_CONFIGURATIONS["extraLarge"];
+        }
+
+        return HALLOWEEN_CONFIGURATIONS["small"];
       }
       break;
 
