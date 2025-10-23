@@ -10,6 +10,7 @@ const HalloweenScene = () => {
     "./models/cash_bundle.glb",
     "./models/dollars_money_multiple.glb",
     "./models/stashed_dollars.glb",
+    "./models/direction_arrow_orange.glb",
   ]);
   const { scene } = useThree();
 
@@ -36,14 +37,23 @@ const HalloweenScene = () => {
         <Text position={[-30, 1.5, 0]} fontSize={1} color="orange">
           $300K
         </Text>
-        <primitive scale={3.5} position={[0, 0, 0]} object={gltfs[2].scene} />
-        <Text position={[0, 2, 0]} fontSize={1} color="orange">
-          $47M
-        </Text>
-        <primitive scale={10} position={[30, 0, 0]} object={gltfs[3].scene} />
-        <Text position={[30, 6, 0]} fontSize={1} color="orange">
-          {`>$150M`}
-        </Text>
+        <group visible={false}>
+          <primitive scale={3.5} position={[0, 0, 0]} object={gltfs[2].scene} />
+          <Text position={[0, 2, 0]} fontSize={1} color="orange">
+            $47M
+          </Text>
+        </group>
+        <group visible={false}>
+          <primitive scale={10} position={[30, 0, 0]} object={gltfs[3].scene} />
+          <Text position={[30, 6, 0]} fontSize={1} color="orange">
+            {`>$150M`}
+          </Text>
+        </group>
+        <primitive
+          scale={1.2}
+          position={[-22.5, 0, 0]}
+          object={gltfs[4].scene}
+        />
       </Stage>
     </>
   );
