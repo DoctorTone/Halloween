@@ -5,7 +5,12 @@ import { Color } from "three";
 import ResponsiveCamera from "../components/ResponsiveCamera";
 
 const HalloweenScene = () => {
-  const gltf = useGLTF("./models/michael_myers.glb");
+  const gltfs = useGLTF([
+    "./models/michael_myers.glb",
+    "./models/cash_bundle.glb",
+    "./models/dollars_money_multiple.glb",
+    "./models/stashed_dollars.glb",
+  ]);
   const { scene } = useThree();
 
   useEffect(() => {
@@ -16,12 +21,19 @@ const HalloweenScene = () => {
     <>
       <ResponsiveCamera scene="Halloween" />
       <Stage
-        adjustCamera={2}
-        center={{ disable: false }}
+        adjustCamera={false}
+        center={{ disable: true }}
         environment={"night"}
         shadows={"contact"}
       >
-        <primitive object={gltf.scene} />
+        <primitive
+          scale={0.05}
+          position={[-10, 0, 20]}
+          object={gltfs[0].scene}
+        />
+        <primitive scale={0.4} position={[-30, 0, 0]} object={gltfs[1].scene} />
+        <primitive scale={3.5} position={[0, 0, 0]} object={gltfs[2].scene} />
+        <primitive scale={10} position={[30, 0, 0]} object={gltfs[3].scene} />
       </Stage>
     </>
   );

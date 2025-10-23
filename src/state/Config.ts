@@ -43,7 +43,7 @@ export const HALLOWEEN_CONFIGURATIONS = {
   small: new Vector3(0, 0.125, 0.5),
   landscape: new Vector3(0, 0.125, 0.5),
   large: new Vector3(0, 0.125, 0.5),
-  extraLarge: new Vector3(0, -75, 20),
+  extraLarge: new Vector3(0, 15, 50),
 };
 
 export const POSITIONS = {
