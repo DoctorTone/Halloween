@@ -25,6 +25,12 @@ const SceneSwitcher = () => {
       }
       break;
 
+    case "/end":
+      {
+        return null;
+      }
+      break;
+
     default:
       return <GraveyardScene />;
   }

@@ -7,12 +7,12 @@ const GraveyardUI = () => {
   const navigate = useNavigate();
   return (
     <div id="enter" className="panel">
-      <Typography variant="h5">
+      <p className="spooky-text">
         Want to see some spooky Halloween facts?
         <IconButton onClick={() => navigate("/business")}>
           <ForwardIcon fontSize="large" color="warning" />
         </IconButton>
-      </Typography>
+      </p>
     </div>
   );
 };

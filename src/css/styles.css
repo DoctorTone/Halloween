@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+
 html,
 body,
 #root {
@@ -18,6 +20,10 @@ body {
 }
 .hover {
   cursor: pointer;
+}
+.spooky-text {
+  font-family: "Nosifer", system-ui, sans-serif;
+  font-size: x-large;
 }
 #info {
   right: 1%;
@@ -47,6 +53,12 @@ body {
 }
 #halloween {
   bottom: 10%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+}
+#end {
+  top: 10%;
   left: 0%;
   width: 100%;
   text-align: center;

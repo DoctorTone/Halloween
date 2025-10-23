@@ -3,6 +3,7 @@ import GraveyardUI from "./GraveyardUI";
 import BusinessUI from "./BusinessUI";
 import PumpkinUI from "./PumpkinUI";
 import HalloweenUI from "./HalloweenUI";
+import EndPage from "../components/EndPage";
 
 const UISwitcher = () => {
   const { pathname } = useLocation();
@@ -22,6 +23,12 @@ const UISwitcher = () => {
     case "/halloween":
       {
         return <HalloweenUI />;
+      }
+      break;
+
+    case "/end":
+      {
+        return <EndPage />;
       }
       break;
 

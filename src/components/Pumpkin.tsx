@@ -5,8 +5,8 @@ const Pumpkin = () => {
 
   return (
     <primitive
-      position-y={-0.05}
-      scale={1.2}
+      position-y={-0.15}
+      scale={1.3}
       rotation-y={-Math.PI / 9}
       object={scene}
     />
