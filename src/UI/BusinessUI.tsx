@@ -9,7 +9,7 @@ const BusinessUI = () => {
   const text = [
     "Halloween is big business.",
     "Last year the UK spent £1.2 billion!",
-    "The US spent...$12.2 billion!!",
+    "The US spent $12.2 billion!!",
     "That's a lot of candy...",
   ];
   const [step, setStep] = useState(0);
@@ -39,12 +39,12 @@ const BusinessUI = () => {
       </div>
       <div id="businessNext" className="panel">
         {next && (
-          <Typography variant="h5">
-            Tell me about pumpkins?
+          <p className="spooky-text red-text">
+            Pumpkin facts!
             <IconButton onClick={() => navigate("/pumpkin")}>
-              <ForwardIcon fontSize="large" color="warning" />
+              <ForwardIcon fontSize="large" color="error" />
             </IconButton>
-          </Typography>
+          </p>
         )}
       </div>
     </>

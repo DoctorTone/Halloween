@@ -5,14 +5,14 @@ import ResponsiveCamera from "../components/ResponsiveCamera";
 import { Color, type Group } from "three";
 import { SCALES } from "../state/Config";
 
-const DELAY = 4;
+const DELAY = 8;
 const BusinessScene = () => {
   const candyRef = useRef<Group>(null);
   const gltf = useGLTF("./models/candyCentre.glb");
   const { scene } = useThree();
   let elapsedTime = 0;
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     elapsedTime += delta;
     if (elapsedTime < DELAY) return;
 
@@ -52,7 +52,7 @@ const BusinessScene = () => {
       <Text position={[-1.35, -0.65, 0.6]} fontSize={0.15} color="white">
         UK
       </Text>
-      <Text position={[-1.35, 0.15, 0]} fontSize={0.125} color="white">
+      <Text position={[-1.25, 0.45, 0]} fontSize={0.125} color="white">
         £1.2B
       </Text>
       <Text position={[1.1, 2, 0]} fontSize={0.125} color="white">

@@ -18,7 +18,7 @@ const StoryText = ({ step, text }: StoryProps) => {
           transition={{ duration: 0.4 }}
           style={{ position: "absolute" }}
         >
-          <Typography variant="h5">{text[step]}</Typography>
+          <Typography sx={{ fontSize: "1.75rem" }}>{text[step]}</Typography>
         </motion.div>
       </AnimatePresence>
     </div>
