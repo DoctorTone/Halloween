@@ -42,31 +42,17 @@ body {
   width: 100%;
   text-align: center;
 }
-#business {
-  top: 12.5%;
-  left: 22.5%;
-  width: 100%;
-  text-align: center;
-}
-#businessNext {
-  bottom: 10%;
-  left: 0%;
-  width: 100%;
-  text-align: center;
-}
-#pumpkin {
-  top: 12.5%;
-  left: 22.5%;
-  width: 100%;
-  text-align: center;
-}
-#pumpkinNext {
-  bottom: 10%;
-  left: 0%;
-  width: 100%;
-  text-align: center;
-}
+#business,
+#pumpkin,
 #halloween {
+  top: 12.5%;
+  left: 22.5%;
+  width: 100%;
+  text-align: center;
+}
+#businessNext,
+#pumpkinNext,
+#halloweenNext {
   bottom: 10%;
   left: 0%;
   width: 100%;
