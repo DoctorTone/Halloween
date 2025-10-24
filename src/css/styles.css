@@ -48,14 +48,14 @@ body {
 #pumpkin,
 #halloween {
   top: 12.5%;
-  left: 22.5%;
-  width: 100%;
+  left: 5%;
+  width: 90%;
   text-align: center;
 }
 #businessNext,
 #pumpkinNext,
 #halloweenNext {
-  bottom: 10%;
+  bottom: 5%;
   left: 0%;
   width: 100%;
   text-align: center;
