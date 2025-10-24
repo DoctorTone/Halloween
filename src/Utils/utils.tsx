@@ -15,33 +15,37 @@ export const getScreenConfiguration = (
   switch (scene) {
     case "Graveyard":
       {
-        // Small screens
+        // Phone in portrait
         if (width <= RESOLUTIONS.SMALL) {
-          return GRAVEYARD_CONFIGURATIONS["small"];
+          return GRAVEYARD_CONFIGURATIONS["phone_portrait"];
         }
 
         // Phone in landscape
         if (width <= RESOLUTIONS.MEDIUM && width > height) {
-          return GRAVEYARD_CONFIGURATIONS["landscape"];
+          return GRAVEYARD_CONFIGURATIONS["phone_landscape"];
         }
 
+        // iPad in portrait
+        if (width <= RESOLUTIONS.MEDIUM && width < height) {
+          return GRAVEYARD_CONFIGURATIONS["ipad_portrait"];
+        }
+
+        // iPad in landscape
         if (width <= RESOLUTIONS.LARGE && width > height) {
+          return GRAVEYARD_CONFIGURATIONS["ipad_landscape"];
+        }
+
+        // Large tablet
+        if (width <= RESOLUTIONS.LARGE) {
+          return GRAVEYARD_CONFIGURATIONS["tablet"];
+        }
+
+        // Laptop or some macs
+        if (width <= RESOLUTIONS.X_LARGE) {
           return GRAVEYARD_CONFIGURATIONS["large"];
         }
 
-        // if (width <= RESOLUTIONS.LARGE) {
-        //   return GRAVEYARD_CONFIGURATIONS["large"];
-        // }
-
-        // if (width <= RESOLUTIONS.X_LARGE) {
-        //   return GRAVEYARD_CONFIGURATIONS[CONFIG_TYPE.TABLET];
-        // }
-
-        if (width >= RESOLUTIONS.X_LARGE) {
-          return GRAVEYARD_CONFIGURATIONS["extraLarge"];
-        }
-
-        return GRAVEYARD_CONFIGURATIONS["small"];
+        return GRAVEYARD_CONFIGURATIONS["extraLarge"];
       }
       break;
 

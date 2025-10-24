@@ -5,7 +5,7 @@ import ResponsiveCamera from "../components/ResponsiveCamera";
 import { Color, type Group } from "three";
 import { SCALES } from "../state/Config";
 
-const DELAY = 8;
+const DELAY = 5;
 const BusinessScene = () => {
   const candyRef = useRef<Group>(null);
   const gltf = useGLTF("./models/candyCentre.glb");

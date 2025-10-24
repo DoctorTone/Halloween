@@ -19,9 +19,12 @@ export const TARGET_POSITION = {
 };
 
 export const GRAVEYARD_CONFIGURATIONS = {
-  small: new Vector3(0, 0.125, 2),
-  landscape: new Vector3(0, 0.125, 1),
-  large: new Vector3(0, 0.125, 0.5),
+  phone_portrait: new Vector3(0, 0.125, 2),
+  phone_landscape: new Vector3(0, 0.125, 1),
+  ipad_portrait: new Vector3(0, 0.125, 1.5),
+  ipad_landscape: new Vector3(0, 0.125, 1),
+  tablet: new Vector3(0, 0.125, 2),
+  large: new Vector3(0, 0.125, 1),
   extraLarge: new Vector3(-0.25, 0.15, 0.75),
 };
 
@@ -35,7 +38,7 @@ export const BUSINESS_CONFIGURATIONS = {
 export const PUMPKIN_CONFIGURATIONS = {
   small: new Vector3(0, 2.5, 10),
   landscape: new Vector3(0, 1, 4),
-  large: new Vector3(0, 0.125, 0.5),
+  large: new Vector3(0, 1, 4),
   extraLarge: new Vector3(0, 1, 4.5),
 };
 

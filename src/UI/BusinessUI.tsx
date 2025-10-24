@@ -26,7 +26,7 @@ const BusinessUI = () => {
           return prev;
         }
       });
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(intervalID);
   }, []);
