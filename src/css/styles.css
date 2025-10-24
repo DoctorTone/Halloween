@@ -61,8 +61,14 @@ body {
   text-align: center;
 }
 #end {
-  top: 25%;
+  top: 15%;
   left: 0%;
   width: 100%;
   text-align: center;
+}
+
+@media (min-width: 650px) and (orientation: landscape) {
+  #end {
+    top: 2%;
+  }
 }
