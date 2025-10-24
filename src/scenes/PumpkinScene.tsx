@@ -11,7 +11,7 @@ const PumpkinScene = () => {
   const gltf = useGLTF("./models/pumpkinKit.glb");
   const { scene } = useThree();
   const pumpkinRef = useRef<Group>(null);
-  const shadowRef = useRef(null);
+  const shadowRef = useRef<any>(null);
   let elapsedTime = 0;
 
   useFrame((_, delta) => {
