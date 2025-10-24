@@ -6,7 +6,7 @@ import ResponsiveCamera from "../components/ResponsiveCamera";
 import { PUMPKIN } from "../state/Config";
 
 const DELAY = 8;
-const SPEED = 3;
+const SPEED = 4;
 const PumpkinScene = () => {
   const gltf = useGLTF("./models/pumpkinKit.glb");
   const { scene } = useThree();

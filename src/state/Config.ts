@@ -33,8 +33,8 @@ export const BUSINESS_CONFIGURATIONS = {
 };
 
 export const PUMPKIN_CONFIGURATIONS = {
-  small: new Vector3(0, 0.125, 0.5),
-  landscape: new Vector3(0, 0.125, 0.5),
+  small: new Vector3(0, 2.5, 10),
+  landscape: new Vector3(0, 1, 4),
   large: new Vector3(0, 0.125, 0.5),
   extraLarge: new Vector3(0, 1, 4.5),
 };
@@ -59,7 +59,7 @@ export const SCALES = {
 };
 
 export const PUMPKIN = {
-  START_HEIGHT: 4,
+  START_HEIGHT: 6,
   MAX_SCALE: 4,
 };
 export const ARROW = {
