@@ -25,6 +25,9 @@ body {
   font-family: "Nosifer", system-ui, sans-serif;
   font-size: x-large;
 }
+.red-text {
+  color: red;
+}
 #info {
   right: 1%;
   bottom: 0%;
