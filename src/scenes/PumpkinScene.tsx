@@ -4,12 +4,17 @@ import { useThree, useFrame } from "@react-three/fiber";
 import { Color, Group } from "three";
 import ResponsiveCamera from "../components/ResponsiveCamera";
 
+const DELAY = 8;
 const PumpkinScene = () => {
   const gltf = useGLTF("./models/pumpkinKit.glb");
   const { scene } = useThree();
   const pumpkinRef = useRef<Group>(null);
+  let elapsedTime = 0;
 
   useFrame((_, delta) => {
+    elapsedTime += delta;
+    if (elapsedTime < DELAY) return;
+
     if (pumpkinRef.current) {
       pumpkinRef.current.position.y -= delta * 2;
       if (pumpkinRef.current.position.y <= -1) {

@@ -55,6 +55,12 @@ body {
   text-align: center;
 }
 #pumpkin {
+  top: 12.5%;
+  left: 22.5%;
+  width: 100%;
+  text-align: center;
+}
+#pumpkinNext {
   bottom: 10%;
   left: 0%;
   width: 100%;
