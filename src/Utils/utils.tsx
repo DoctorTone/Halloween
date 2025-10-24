@@ -45,103 +45,125 @@ export const getScreenConfiguration = (
           return GRAVEYARD_CONFIGURATIONS["large"];
         }
 
+        // Desktop
         return GRAVEYARD_CONFIGURATIONS["extraLarge"];
       }
       break;
 
     case "Business":
       {
-        // Small screens
-        if (width <= RESOLUTIONS.SMALL) {
-          return BUSINESS_CONFIGURATIONS["small"];
-        }
+        {
+          // Phone in portrait
+          if (width <= RESOLUTIONS.SMALL) {
+            return BUSINESS_CONFIGURATIONS["phone_portrait"];
+          }
 
-        // Phone in landscape
-        if (width <= RESOLUTIONS.MEDIUM && width > height) {
-          return BUSINESS_CONFIGURATIONS["landscape"];
-        }
+          // Phone in landscape
+          if (width <= RESOLUTIONS.MEDIUM && width > height) {
+            return BUSINESS_CONFIGURATIONS["phone_landscape"];
+          }
 
-        if (width <= RESOLUTIONS.LARGE && width > height) {
-          return BUSINESS_CONFIGURATIONS["large"];
-        }
+          // iPad in portrait
+          if (width <= RESOLUTIONS.MEDIUM && width < height) {
+            return BUSINESS_CONFIGURATIONS["ipad_portrait"];
+          }
 
-        // if (width <= RESOLUTIONS.LARGE) {
-        //   return BUSINESS_CONFIGURATIONS["large"];
-        // }
+          // iPad in landscape
+          if (width <= RESOLUTIONS.LARGE && width > height) {
+            return BUSINESS_CONFIGURATIONS["ipad_landscape"];
+          }
 
-        // if (width <= RESOLUTIONS.X_LARGE) {
-        //   return BUSINESS_CONFIGURATIONS[CONFIG_TYPE.TABLET];
-        // }
+          // Large tablet
+          if (width <= RESOLUTIONS.LARGE) {
+            return BUSINESS_CONFIGURATIONS["tablet"];
+          }
 
-        if (width >= RESOLUTIONS.X_LARGE) {
+          // Laptop or some macs
+          if (width <= RESOLUTIONS.X_LARGE) {
+            return BUSINESS_CONFIGURATIONS["large"];
+          }
+
+          // Desktop
           return BUSINESS_CONFIGURATIONS["extraLarge"];
         }
-
-        return BUSINESS_CONFIGURATIONS["small"];
       }
       break;
 
     case "Pumpkin":
       {
-        // Small screens
-        if (width <= RESOLUTIONS.SMALL) {
-          return PUMPKIN_CONFIGURATIONS["small"];
-        }
+        {
+          // Phone in portrait
+          if (width <= RESOLUTIONS.SMALL) {
+            return PUMPKIN_CONFIGURATIONS["phone_portrait"];
+          }
 
-        // Phone in landscape
-        if (width <= RESOLUTIONS.MEDIUM && width > height) {
-          return PUMPKIN_CONFIGURATIONS["landscape"];
-        }
+          // Phone in landscape
+          if (width <= RESOLUTIONS.MEDIUM && width > height) {
+            return PUMPKIN_CONFIGURATIONS["phone_landscape"];
+          }
 
-        if (width <= RESOLUTIONS.LARGE && width > height) {
-          return PUMPKIN_CONFIGURATIONS["large"];
-        }
+          // iPad in portrait
+          if (width <= RESOLUTIONS.MEDIUM && width < height) {
+            return PUMPKIN_CONFIGURATIONS["ipad_portrait"];
+          }
 
-        // if (width <= RESOLUTIONS.LARGE) {
-        //   return PUMPKIN_CONFIGURATIONS["large"];
-        // }
+          // iPad in landscape
+          if (width <= RESOLUTIONS.LARGE && width > height) {
+            return PUMPKIN_CONFIGURATIONS["ipad_landscape"];
+          }
 
-        // if (width <= RESOLUTIONS.X_LARGE) {
-        //   return PUMPKIN_CONFIGURATIONS[CONFIG_TYPE.TABLET];
-        // }
+          // Large tablet
+          if (width <= RESOLUTIONS.LARGE) {
+            return PUMPKIN_CONFIGURATIONS["tablet"];
+          }
 
-        if (width >= RESOLUTIONS.X_LARGE) {
+          // Laptop or some macs
+          if (width <= RESOLUTIONS.X_LARGE) {
+            return PUMPKIN_CONFIGURATIONS["large"];
+          }
+
+          // Desktop
           return PUMPKIN_CONFIGURATIONS["extraLarge"];
         }
-
-        return PUMPKIN_CONFIGURATIONS["small"];
       }
       break;
 
     case "Halloween":
       {
-        // Small screens
-        if (width <= RESOLUTIONS.SMALL) {
-          return HALLOWEEN_CONFIGURATIONS["small"];
-        }
+        {
+          // Phone in portrait
+          if (width <= RESOLUTIONS.SMALL) {
+            return HALLOWEEN_CONFIGURATIONS["phone_portrait"];
+          }
 
-        // Phone in landscape
-        if (width <= RESOLUTIONS.MEDIUM && width > height) {
-          return HALLOWEEN_CONFIGURATIONS["landscape"];
-        }
+          // Phone in landscape
+          if (width <= RESOLUTIONS.MEDIUM && width > height) {
+            return HALLOWEEN_CONFIGURATIONS["phone_landscape"];
+          }
 
-        if (width <= RESOLUTIONS.LARGE && width > height) {
-          return HALLOWEEN_CONFIGURATIONS["large"];
-        }
+          // iPad in portrait
+          if (width <= RESOLUTIONS.MEDIUM && width < height) {
+            return HALLOWEEN_CONFIGURATIONS["ipad_portrait"];
+          }
 
-        // if (width <= RESOLUTIONS.LARGE) {
-        //   return HALLOWEEN_CONFIGURATIONS["large"];
-        // }
+          // iPad in landscape
+          if (width <= RESOLUTIONS.LARGE && width > height) {
+            return HALLOWEEN_CONFIGURATIONS["ipad_landscape"];
+          }
 
-        // if (width <= RESOLUTIONS.X_LARGE) {
-        //   return HALLOWEEN_CONFIGURATIONS[CONFIG_TYPE.TABLET];
-        // }
+          // Large tablet
+          if (width <= RESOLUTIONS.LARGE) {
+            return HALLOWEEN_CONFIGURATIONS["tablet"];
+          }
 
-        if (width >= RESOLUTIONS.X_LARGE) {
+          // Laptop or some macs
+          if (width <= RESOLUTIONS.X_LARGE) {
+            return HALLOWEEN_CONFIGURATIONS["large"];
+          }
+
+          // Desktop
           return HALLOWEEN_CONFIGURATIONS["extraLarge"];
         }
-
-        return HALLOWEEN_CONFIGURATIONS["small"];
       }
       break;
 
