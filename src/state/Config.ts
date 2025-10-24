@@ -36,7 +36,7 @@ export const PUMPKIN_CONFIGURATIONS = {
   small: new Vector3(0, 0.125, 0.5),
   landscape: new Vector3(0, 0.125, 0.5),
   large: new Vector3(0, 0.125, 0.5),
-  extraLarge: new Vector3(0, 2.5, 4.5),
+  extraLarge: new Vector3(0, 1, 4.5),
 };
 
 export const HALLOWEEN_CONFIGURATIONS = {
@@ -58,6 +58,10 @@ export const SCALES = {
   CANDY_MAX: 1.8,
 };
 
+export const PUMPKIN = {
+  START_HEIGHT: 4,
+  MAX_SCALE: 4,
+};
 export const ARROW = {
   START: -22.5,
   START_SECOND: 10,
