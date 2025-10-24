@@ -67,8 +67,8 @@ export const ARROW = {
   START_SECOND: 10,
   MAX_FIRST: -14,
   MAX_SECOND: 17.5,
-  PHASE1_TIME: 5,
-  PHASE2_TIME: 15,
+  PHASE1_TIME: 8,
+  PHASE2_TIME: 17,
   SPEED: 7.5,
 };
 

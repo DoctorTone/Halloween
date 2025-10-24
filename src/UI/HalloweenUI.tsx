@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Typography from "@mui/material/Typography";
 import ForwardIcon from "@mui/icons-material/Forward";
 import IconButton from "@mui/material/IconButton";
 import StoryText from "./StoryText";
@@ -7,10 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 const HalloweenUI = () => {
   const text = [
-    "Hallowen (1978) was one of the first slasher horrors.",
+    `Hallowen (1978) was one of the first "slasher" horrors.`,
     "The budget was $300K...",
     "It grossed $47M at US box office!",
+    "Not bad for 20 days filming.",
     "That's over $150M today!",
+    "Bonus fact - the scary mask you see the killer wear...",
+    "is actually William Shatner!",
   ];
   const navigate = useNavigate();
   const [step, setStep] = useState(0);

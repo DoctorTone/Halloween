@@ -85,18 +85,18 @@ const HalloweenScene = () => {
           rotation-y={-Math.PI / 8}
         />
         <primitive scale={0.4} position={[-30, 0, 0]} object={gltfs[1].scene} />
-        <Text position={[-30, 1.5, 0]} fontSize={1} color="orange">
+        <Text position={[-30, 1.5, 0]} fontSize={1.25} color="orange">
           $300K
         </Text>
         <group ref={mediumRef} visible={false}>
           <primitive scale={3.5} position={[0, 0, 0]} object={gltfs[2].scene} />
-          <Text position={[0, 2, 0]} fontSize={1} color="orange">
+          <Text position={[0, 2, 0]} fontSize={1.75} color="orange">
             $47M
           </Text>
         </group>
         <group ref={maximumRef} visible={false}>
           <primitive scale={10} position={[30, 0, 0]} object={gltfs[3].scene} />
-          <Text position={[30, 6, 0]} fontSize={1} color="orange">
+          <Text position={[30, 6, 0]} fontSize={2} color="orange">
             {`>$150M`}
           </Text>
         </group>
