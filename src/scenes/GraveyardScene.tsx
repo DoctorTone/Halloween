@@ -13,6 +13,7 @@ import GraveMarker from "../components/GraveMarker";
 import ResponsiveCamera from "../components/ResponsiveCamera";
 import { Color } from "three";
 import Lights from "../components/Lights";
+import Tree from "../components/Tree";
 
 const GraveyardScene = () => {
   const { scene } = useThree();
@@ -39,6 +40,7 @@ const GraveyardScene = () => {
       <PostLantern position={POSITIONS.LANTERN} scale={0.2} />
       <Graves />
       <GraveMarker />
+      <Tree />
     </>
   );
 };
