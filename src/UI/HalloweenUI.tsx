@@ -41,7 +41,7 @@ const HalloweenUI = () => {
       </div>
       <div id="halloweenNext" className="panel">
         {next && (
-          <p className="spooky-text red-text">
+          <p className="spooky-text red-text text-large">
             One more thing
             <IconButton onClick={() => navigate("/end")}>
               <ForwardIcon fontSize="large" color="error" />

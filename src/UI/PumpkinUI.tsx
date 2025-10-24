@@ -39,7 +39,7 @@ const PumpkinUI = () => {
       </div>
       <div id="pumpkinNext" className="panel">
         {next && (
-          <p className="spooky-text red-text">
+          <p className="spooky-text red-text text-large">
             Halloween horror
             <IconButton onClick={() => navigate("/halloween")}>
               <ForwardIcon fontSize="large" color="error" />

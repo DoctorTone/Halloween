@@ -23,6 +23,8 @@ body {
 }
 .spooky-text {
   font-family: "Nosifer", system-ui, sans-serif;
+}
+.text-large {
   font-size: x-large;
 }
 .red-text {
@@ -59,7 +61,7 @@ body {
   text-align: center;
 }
 #end {
-  top: 10%;
+  top: 25%;
   left: 0%;
   width: 100%;
   text-align: center;

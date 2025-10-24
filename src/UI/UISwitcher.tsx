@@ -3,7 +3,7 @@ import GraveyardUI from "./GraveyardUI";
 import BusinessUI from "./BusinessUI";
 import PumpkinUI from "./PumpkinUI";
 import HalloweenUI from "./HalloweenUI";
-import EndPage from "../components/EndPage";
+import EndPage from "./EndPage";
 
 const UISwitcher = () => {
   const { pathname } = useLocation();

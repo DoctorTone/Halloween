@@ -41,19 +41,36 @@ const InfoDialog = () => {
           },
         }}
       >
-        <DialogTitle>Framework Model</DialogTitle>
+        <DialogTitle>Halloween Viz</DialogTitle>
         <DialogContent dividers>
           <Typography variant="h6">
+            Thanks to{" "}
             <Link
               variant="h6"
               underline="none"
-              href="https://market.pmnd.rs/model/suzanne-high-poly"
+              href="https://www.kaylousberg.com"
               target="_blank"
               rel="noopener"
             >
-              Suzanne{" "}
+              KayKit
+            </Link>{" "}
+            for all the Halloween models.
+          </Typography>
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            And goosegreen70 for{" "}
+            <Link
+              variant="h6"
+              underline="none"
+              href="https://skfb.ly/6VXwS"
+              target="_blank"
+              rel="noopener"
+            >
+              Michael Myers
             </Link>
-            by pmndrs is licensed under{" "}
+            .
+          </Typography>
+          <Typography variant="h6">
+            All models are licensed under{" "}
             <Link
               variant="h6"
               underline="none"
@@ -68,6 +85,7 @@ const InfoDialog = () => {
         <DialogActions>
           <Button
             variant="contained"
+            color="warning"
             onClick={handleClose}
             sx={{ mr: 1, mb: 1 }}
           >

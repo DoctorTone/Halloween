@@ -38,7 +38,7 @@ const BusinessUI = () => {
       </div>
       <div id="businessNext" className="panel">
         {next && (
-          <p className="spooky-text red-text">
+          <p className="spooky-text red-text text-large">
             Pumpkin facts!
             <IconButton onClick={() => navigate("/pumpkin")}>
               <ForwardIcon fontSize="large" color="error" />
