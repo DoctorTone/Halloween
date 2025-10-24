@@ -40,8 +40,8 @@ export const PUMPKIN_CONFIGURATIONS = {
 };
 
 export const HALLOWEEN_CONFIGURATIONS = {
-  small: new Vector3(0, 0.125, 0.5),
-  landscape: new Vector3(0, 0.125, 0.5),
+  small: new Vector3(0, 70, 120),
+  landscape: new Vector3(0, 15, 30),
   large: new Vector3(0, 0.125, 0.5),
   extraLarge: new Vector3(0, 17.5, 40),
 };
