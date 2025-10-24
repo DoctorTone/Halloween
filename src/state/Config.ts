@@ -19,8 +19,8 @@ export const TARGET_POSITION = {
 };
 
 export const GRAVEYARD_CONFIGURATIONS = {
-  small: new Vector3(0, 0.125, 0.5),
-  landscape: new Vector3(0, 0.125, 0.5),
+  small: new Vector3(0, 0.125, 2),
+  landscape: new Vector3(0, 0.125, 1),
   large: new Vector3(0, 0.125, 0.5),
   extraLarge: new Vector3(-0.25, 0.15, 0.75),
 };
