@@ -8,7 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import MusicOffIcon from "@mui/icons-material/MusicOff";
 
-const SoundDialog = () => {
+const AudioDialog = () => {
   const [dialogOpen, setDialogOpen] = useState(true);
 
   const handleClose = () => {
@@ -21,6 +21,7 @@ const SoundDialog = () => {
       open={dialogOpen}
       maxWidth={"md"}
       fullWidth={true}
+      sx={{ backdropFilter: "blur(10px)" }}
       slotProps={{
         paper: {
           sx: {
@@ -59,4 +60,4 @@ const SoundDialog = () => {
   );
 };
 
-export default SoundDialog;
+export default AudioDialog;

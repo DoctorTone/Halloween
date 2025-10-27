@@ -5,7 +5,7 @@ import PumpkinUI from "./PumpkinUI";
 import HalloweenUI from "./HalloweenUI";
 import EndPage from "./EndPage";
 import AudioToggle from "./AudioToggle";
-import SoundDialog from "../dialogs/SoundDialog";
+import AudioDialog from "../dialogs/AudioDialog";
 
 const UISwitcher = () => {
   const { pathname } = useLocation();
@@ -42,7 +42,7 @@ const UISwitcher = () => {
       return (
         <>
           <AudioToggle />
-          <SoundDialog />
+          <AudioDialog />
           <GraveyardUI />
         </>
       );
