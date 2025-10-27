@@ -7,6 +7,7 @@ import { PUMPKIN } from "../state/Config";
 
 const DELAY = 8;
 const SPEED = 4;
+const PUMPKIN_GAP = 1.75;
 const PumpkinScene = () => {
   const gltf = useGLTF("./models/pumpkinKit.glb");
   const { scene } = useThree();
@@ -45,14 +46,17 @@ const PumpkinScene = () => {
         environment={"night"}
         shadows={false}
       >
-        <group position={[-2.5, -1, -0.5]}>
+        <group position={[-PUMPKIN_GAP, -1, -0.5]}>
           <Clone scale={0.17} object={gltf.scene} />
           <Text position={[0, 0.4, 0]} fontSize={0.15} color="white">
             13lbs
           </Text>
           <Shadow scale={0.4} color={"black"} colorStop={0.3} opacity={0.75} />
         </group>
-        <group ref={pumpkinRef} position={[2, PUMPKIN.START_HEIGHT, -0.5]}>
+        <group
+          ref={pumpkinRef}
+          position={[PUMPKIN_GAP, PUMPKIN.START_HEIGHT, -0.5]}
+        >
           <Text position={[0, 3.25, 0]} fontSize={0.15} color="white">
             2749lbs
           </Text>

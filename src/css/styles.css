@@ -73,6 +73,6 @@ body {
 
 @media (min-width: 650px) and (orientation: landscape) {
   #end {
-    top: 2%;
+    top: 7.5%;
   }
 }
