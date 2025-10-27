@@ -6,6 +6,7 @@ import { INTERACTIONS, TARGET_POSITION } from "./state/Config";
 import SceneSwitcher from "./components/SceneSwitcher";
 import Loading from "./UI/Loading";
 import UISwitcher from "./UI/UISwitcher";
+import AudioManager from "./components/AudioManager";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         />
       </Canvas>
       <UISwitcher />
+      <AudioManager />
     </BrowserRouter>
   );
 }

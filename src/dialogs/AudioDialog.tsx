@@ -7,17 +7,24 @@ import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import MusicOffIcon from "@mui/icons-material/MusicOff";
+import useStore from "../state/store";
 
 const AudioDialog = () => {
   const [dialogOpen, setDialogOpen] = useState(true);
+  const setAudioEnabled = useStore((state) => state.setAudioEnabled);
 
-  const handleClose = () => {
+  const enableAudio = () => {
+    setAudioEnabled(true);
+    setDialogOpen(false);
+  };
+
+  const muteAudio = () => {
+    setAudioEnabled(false);
     setDialogOpen(false);
   };
 
   return (
     <Dialog
-      onClose={handleClose}
       open={dialogOpen}
       maxWidth={"md"}
       fullWidth={true}
@@ -43,14 +50,14 @@ const AudioDialog = () => {
       <DialogActions>
         <IconButton
           color="warning"
-          onClick={handleClose}
+          onClick={muteAudio}
           sx={{ mr: 3, mb: 1, border: "1px solid orange" }}
         >
           <MusicOffIcon />
         </IconButton>
         <IconButton
           color="warning"
-          onClick={handleClose}
+          onClick={enableAudio}
           sx={{ mr: 1, mb: 1, border: "1px solid orange" }}
         >
           <MusicNoteIcon />

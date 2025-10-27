@@ -3,8 +3,10 @@ import ForwardIcon from "@mui/icons-material/Forward";
 import IconButton from "@mui/material/IconButton";
 import { useNavigate } from "react-router-dom";
 import StoryText from "./StoryText";
+import useStore from "../state/store";
 
 const BusinessUI = () => {
+  const setCurrentScene = useStore((state) => state.setCurrentScene);
   const text = [
     "Halloween is big business.",
     "Last year the UK spent £1.2 billion!",
@@ -16,6 +18,7 @@ const BusinessUI = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    setCurrentScene("business");
     const intervalID = setInterval(() => {
       setStep((prev) => {
         if (prev < text.length - 1) {
