@@ -1,8 +1,15 @@
-import Switch from "@mui/material/Switch";
+import { styled } from "@mui/material/styles";
+import Switch, { switchClasses } from "@mui/material/Switch";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import Box from "@mui/material/Box";
 import type { ChangeEvent } from "react";
 import useStore from "../state/store";
+
+const AudioSwitch = styled(Switch)({
+  [`& .${switchClasses.track}`]: {
+    backgroundColor: "red",
+  },
+});
 
 const AudioToggle = () => {
   const setAudioEnabled = useStore((state) => state.setAudioEnabled);
@@ -15,7 +22,7 @@ const AudioToggle = () => {
   return (
     <div id="audio" className="panel">
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Switch checked={audioEnabled} onChange={onToggleAudio} />
+        <AudioSwitch checked={audioEnabled} onChange={onToggleAudio} />
         <MusicNoteIcon color="primary" />
       </Box>
     </div>
