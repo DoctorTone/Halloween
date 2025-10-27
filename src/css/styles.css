@@ -90,4 +90,7 @@ body {
   #end {
     top: 25%;
   }
+  .text-large {
+    font-size: x-large;
+  }
 }

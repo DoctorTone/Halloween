@@ -171,3 +171,11 @@ export const getScreenConfiguration = (
       return new Vector3();
   }
 };
+
+export const isiPad = () => {
+  return (
+    /Macintosh/.test(navigator.userAgent) &&
+    navigator.maxTouchPoints &&
+    navigator.maxTouchPoints > 1
+  );
+};

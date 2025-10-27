@@ -23,7 +23,7 @@ const EndPage = () => {
             Don't let all the crazy facts scare you.
           </Typography>
           <Typography variant="h5" sx={{ mb: 6 }}>
-            You wouldn't want to get samhainophobia (fear of Halloween).
+            You wouldn't want to get samhainophobia (fear of Halloween!).
           </Typography>
           <h1 className="spooky-text red-text">Happy Halloween!</h1>
         </Box>

@@ -69,8 +69,11 @@ const InfoDialog = () => {
             </Link>
             .
           </Typography>
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            Sounds from Pixababy and Freesound
+          </Typography>
           <Typography variant="h6">
-            All models are licensed under{" "}
+            All assets are licensed under{" "}
             <Link
               variant="h6"
               underline="none"

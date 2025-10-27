@@ -9,9 +9,9 @@ const PumpkinUI = () => {
   const setCurrentScene = useStore((state) => state.setCurrentScene);
   const text = [
     "Pumpkins weigh about 13 pounds,",
-    "and have a diameter of 10 inches.",
+    "with a diameter of 10 inches.",
     "The largest pumpkin weighed 2749 pounds,",
-    "and had a diameter of over 6.5 feet!",
+    "with a diameter of over 6.5 feet!",
     "That's heavier than a Ford Fiesta!",
   ];
   const navigate = useNavigate();

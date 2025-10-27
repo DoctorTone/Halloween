@@ -10,6 +10,7 @@ interface ResponsiveProps {
 const ResponsiveCamera = ({ scene }: ResponsiveProps) => {
   const screenSize = useStore((state) => state.screenSize);
   const setScreenSize = useStore((state) => state.setScreenSize);
+  const currentScene = useStore((state) => state.currentScene);
 
   const { camera } = useThree();
 
@@ -30,7 +31,7 @@ const ResponsiveCamera = ({ scene }: ResponsiveProps) => {
     );
     camera.position.copy(configuration);
     camera.updateProjectionMatrix();
-  }, [screenSize.width, screenSize.height]);
+  }, [screenSize.width, screenSize.height, currentScene]);
 
   return null;
 };

@@ -8,8 +8,8 @@ export const RESOLUTIONS = {
 };
 
 export const INTERACTIONS = {
-  PAN: true,
-  ROTATE: true,
+  PAN: false,
+  ROTATE: false,
 };
 
 export const TARGET_POSITION = {
@@ -44,14 +44,14 @@ export const PUMPKIN_CONFIGURATIONS = {
   ipad_portrait: new Vector3(0, 1.5, 6),
   ipad_landscape: new Vector3(0, 1, 4),
   tablet: new Vector3(0, 0.125, 2),
-  large: new Vector3(0, 1, 4),
-  extraLarge: new Vector3(0, 1, 4),
+  large: new Vector3(0, 1, 4.5),
+  extraLarge: new Vector3(0, 1, 5),
 };
 
 export const HALLOWEEN_CONFIGURATIONS = {
   phone_portrait: new Vector3(0, 35, 110),
   phone_landscape: new Vector3(0, 20, 50),
-  ipad_portrait: new Vector3(0, 35, 75),
+  ipad_portrait: new Vector3(0, 35, 85),
   ipad_landscape: new Vector3(0, 25, 50),
   tablet: new Vector3(0, 0.125, 2),
   large: new Vector3(0, 20, 40),
