@@ -45,7 +45,7 @@ export const PUMPKIN_CONFIGURATIONS = {
   ipad_landscape: new Vector3(0, 1, 4),
   tablet: new Vector3(0, 0.125, 2),
   large: new Vector3(0, 1, 4),
-  extraLarge: new Vector3(0.25, 0.15, 0.75),
+  extraLarge: new Vector3(0, 1, 4),
 };
 
 export const HALLOWEEN_CONFIGURATIONS = {
@@ -55,7 +55,7 @@ export const HALLOWEEN_CONFIGURATIONS = {
   ipad_landscape: new Vector3(0, 25, 50),
   tablet: new Vector3(0, 0.125, 2),
   large: new Vector3(0, 20, 40),
-  extraLarge: new Vector3(-0.25, 0.15, 0.75),
+  extraLarge: new Vector3(0, 20, 40),
 };
 
 export const POSITIONS = {
