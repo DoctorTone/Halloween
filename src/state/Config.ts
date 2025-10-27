@@ -41,8 +41,8 @@ export const BUSINESS_CONFIGURATIONS = {
 export const PUMPKIN_CONFIGURATIONS = {
   phone_portrait: new Vector3(0, 0.5, 7),
   phone_landscape: new Vector3(0, 0.5, 4),
-  ipad_portrait: new Vector3(0, 0.125, 1.5),
-  ipad_landscape: new Vector3(0, 0.125, 1),
+  ipad_portrait: new Vector3(0, 1.5, 6),
+  ipad_landscape: new Vector3(0, 1, 4),
   tablet: new Vector3(0, 0.125, 2),
   large: new Vector3(0, 0.125, 1),
   extraLarge: new Vector3(0.25, 0.15, 0.75),
@@ -51,8 +51,8 @@ export const PUMPKIN_CONFIGURATIONS = {
 export const HALLOWEEN_CONFIGURATIONS = {
   phone_portrait: new Vector3(0, 35, 110),
   phone_landscape: new Vector3(0, 20, 50),
-  ipad_portrait: new Vector3(0, 0.125, 1.5),
-  ipad_landscape: new Vector3(0, 0.125, 1),
+  ipad_portrait: new Vector3(0, 35, 75),
+  ipad_landscape: new Vector3(0, 25, 50),
   tablet: new Vector3(0, 0.125, 2),
   large: new Vector3(0, 0.125, 1),
   extraLarge: new Vector3(-0.25, 0.15, 0.75),

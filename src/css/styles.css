@@ -76,3 +76,18 @@ body {
     top: 7.5%;
   }
 }
+@media (min-width: 768px) {
+  #end {
+    top: 25%;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  #end {
+    top: 10%;
+  }
+}
+@media (min-width: 900px) {
+  #end {
+    top: 25%;
+  }
+}
