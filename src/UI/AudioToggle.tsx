@@ -1,13 +1,14 @@
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import Box from "@mui/material/Box";
 
 const AudioToggle = () => {
   return (
     <div id="audio" className="panel">
-      <FormGroup>
-        <FormControlLabel control={<Switch />} label="Audio" />
-      </FormGroup>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Switch defaultChecked />
+        <MusicNoteIcon color="primary" />
+      </Box>
     </div>
   );
 };
