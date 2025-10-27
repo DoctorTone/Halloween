@@ -3,8 +3,10 @@ import ForwardIcon from "@mui/icons-material/Forward";
 import IconButton from "@mui/material/IconButton";
 import StoryText from "./StoryText";
 import { useNavigate } from "react-router-dom";
+import useStore from "../state/store";
 
 const PumpkinUI = () => {
+  const setCurrentScene = useStore((state) => state.setCurrentScene);
   const text = [
     "Pumpkins weigh about 13 pounds,",
     "and have a diameter of 10 inches.",
@@ -17,6 +19,7 @@ const PumpkinUI = () => {
   const [next, setNext] = useState(false);
 
   useEffect(() => {
+    setCurrentScene("pumpkin");
     const intervalID = setInterval(() => {
       setStep((prev) => {
         if (prev < text.length - 1) {

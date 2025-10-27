@@ -3,8 +3,10 @@ import ForwardIcon from "@mui/icons-material/Forward";
 import IconButton from "@mui/material/IconButton";
 import StoryText from "./StoryText";
 import { useNavigate } from "react-router-dom";
+import useStore from "../state/store";
 
 const HalloweenUI = () => {
+  const setCurrentScene = useStore((state) => state.setCurrentScene);
   const text = [
     `Hallowen (1978) was one of the first "slasher" horrors.`,
     "The budget was $300K...",
@@ -19,6 +21,7 @@ const HalloweenUI = () => {
   const [next, setNext] = useState(false);
 
   useEffect(() => {
+    setCurrentScene("halloween");
     const intervalID = setInterval(() => {
       setStep((prev) => {
         if (prev < text.length - 1) {
