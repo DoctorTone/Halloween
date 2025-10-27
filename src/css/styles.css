@@ -44,6 +44,10 @@ body {
   width: 100%;
   text-align: center;
 }
+#audio {
+  top: 5%;
+  right: 2%;
+}
 #business,
 #pumpkin,
 #halloween {

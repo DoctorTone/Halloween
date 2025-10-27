@@ -4,13 +4,18 @@ import BusinessUI from "./BusinessUI";
 import PumpkinUI from "./PumpkinUI";
 import HalloweenUI from "./HalloweenUI";
 import EndPage from "./EndPage";
+import AudioToggle from "./AudioToggle";
 
 const UISwitcher = () => {
   const { pathname } = useLocation();
   switch (pathname) {
     case "/business":
       {
-        return <BusinessUI />;
+        return (
+          <>
+            <BusinessUI />
+          </>
+        );
       }
       break;
 
@@ -33,7 +38,12 @@ const UISwitcher = () => {
       break;
 
     default: {
-      return <GraveyardUI />;
+      return (
+        <>
+          <AudioToggle />
+          <GraveyardUI />
+        </>
+      );
     }
   }
 };
