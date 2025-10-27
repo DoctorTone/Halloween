@@ -1,8 +1,16 @@
+import { useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import Copyright from "./Copyright";
 import Info from "./Info";
+import useStore from "../state/store";
 
 const EndPage = () => {
+  const setCurrentScene = useStore((state) => state.setCurrentScene);
+
+  useEffect(() => {
+    setCurrentScene("end");
+  }, []);
+
   return (
     <>
       <div id="end" className="panel">

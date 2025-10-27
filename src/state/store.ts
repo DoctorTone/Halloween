@@ -10,6 +10,7 @@ type FrameworkState = {
   currentScene: string;
   setCurrentScene: (sceneName: string) => void;
   ambient: Howl;
+  cackle: Howl;
   audioEnabled: boolean;
   setAudioEnabled: (status: boolean) => void;
 };
@@ -25,6 +26,11 @@ const useStore = create<FrameworkState>((set) => ({
   ambient: new Howl({
     src: ["./audio/horror-theme-1.wav"],
     loop: true,
+    volume: 0.25,
+  }),
+  cackle: new Howl({
+    src: ["./audio/witch-laughing.mp3"],
+    loop: false,
     volume: 0.25,
   }),
   audioEnabled: false,

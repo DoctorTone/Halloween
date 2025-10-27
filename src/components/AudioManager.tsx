@@ -5,12 +5,19 @@ const AudioManager = () => {
   const currentScene = useStore((state) => state.currentScene);
   const audioEnabled = useStore((state) => state.audioEnabled);
   const ambient = useStore((state) => state.ambient);
+  const cackle = useStore((state) => state.cackle);
 
   useEffect(() => {
     if (currentScene === "graveyard" && audioEnabled) {
       ambient.play();
     } else {
       ambient.stop();
+    }
+
+    if (currentScene === "end" && audioEnabled) {
+      cackle.play();
+    } else {
+      cackle.stop();
     }
   }, [currentScene, audioEnabled]);
 
