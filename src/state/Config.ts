@@ -50,7 +50,7 @@ export const PUMPKIN_CONFIGURATIONS = {
 
 export const HALLOWEEN_CONFIGURATIONS = {
   phone_portrait: new Vector3(0, 35, 125),
-  phone_landscape: new Vector3(0, 20, 50),
+  phone_landscape: new Vector3(0, 20, 30),
   ipad_portrait: new Vector3(0, 35, 85),
   ipad_landscape: new Vector3(0, 25, 50),
   tablet: new Vector3(0, 0.125, 2),
