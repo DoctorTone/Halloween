@@ -78,7 +78,7 @@ const HalloweenScene = () => {
       <ResponsiveCamera scene="Halloween" />
       <Stage
         adjustCamera={false}
-        center={{ disable: true }}
+        center={{ disable: false }}
         environment={"night"}
         shadows={"contact"}
       >

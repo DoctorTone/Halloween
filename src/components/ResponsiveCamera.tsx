@@ -24,6 +24,8 @@ const ResponsiveCamera = ({ scene }: ResponsiveProps) => {
   }, []);
 
   useEffect(() => {
+    // DEBUG
+    console.log("Scene changed", scene);
     const configuration = getScreenConfiguration(
       scene,
       screenSize.width,

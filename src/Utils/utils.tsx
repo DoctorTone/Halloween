@@ -35,8 +35,8 @@ export const getScreenConfiguration = (
           return GRAVEYARD_CONFIGURATIONS["ipad_landscape"];
         }
 
-        // Large tablet
-        if (width <= RESOLUTIONS.LARGE) {
+        // Large tablet in portrait
+        if (width <= RESOLUTIONS.LARGE && width < height) {
           return GRAVEYARD_CONFIGURATIONS["tablet"];
         }
 
@@ -133,6 +133,8 @@ export const getScreenConfiguration = (
         {
           // Phone in portrait
           if (width <= RESOLUTIONS.SMALL) {
+            // DEBUG
+            console.log("Small res");
             return HALLOWEEN_CONFIGURATIONS["phone_portrait"];
           }
 
