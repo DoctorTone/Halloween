@@ -41,8 +41,8 @@ const InfoDialog = () => {
           },
         }}
       >
-        <DialogTitle>Halloween Viz</DialogTitle>
-        <DialogContent dividers>
+        <DialogTitle sx={{ color: "orange" }}>Halloween Viz</DialogTitle>
+        <DialogContent>
           <Typography variant="h6">
             Thanks to{" "}
             <Link
@@ -70,7 +70,26 @@ const InfoDialog = () => {
             .
           </Typography>
           <Typography variant="h6" sx={{ mb: 2 }}>
-            Sounds from Pixababy and Freesound
+            Sounds from{" "}
+            <Link
+              variant="h6"
+              underline="none"
+              href="https://pixabay.com/sound-effects/witch-laughing-104760/"
+              target="_blank"
+              rel="noopener"
+            >
+              Pixababy
+            </Link>{" "}
+            and{" "}
+            <Link
+              variant="h6"
+              underline="none"
+              href="https://freesound.org/people/Robinhood76/sounds/82299/"
+              target="_blank"
+              rel="noopener"
+            >
+              Freesound
+            </Link>
           </Typography>
           <Typography variant="h6">
             All assets are licensed under{" "}

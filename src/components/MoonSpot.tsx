@@ -1,6 +1,6 @@
 import { useState, useEffect, type JSX } from "react";
 import { SpotLight, Box } from "@react-three/drei";
-import { Object3D, Vector3 } from "three";
+import { Object3D } from "three";
 
 const MoonSpot = (props: JSX.IntrinsicElements["group"]) => {
   const [target] = useState(() => new Object3D());

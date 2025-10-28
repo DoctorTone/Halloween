@@ -19,9 +19,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Ghost(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF(
-    "./models/ghost.glb"
-  ) as unknown as GLTFResult;
+  const { nodes } = useGLTF("./models/ghost.glb") as unknown as GLTFResult;
   return (
     <Float>
       <group {...props} dispose={null}>

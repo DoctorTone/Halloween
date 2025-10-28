@@ -6,14 +6,19 @@ import ResponsiveCamera from "../components/ResponsiveCamera";
 import { ARROW } from "../state/Config";
 
 const HalloweenScene = () => {
-  const gltfs = useGLTF([
-    "./models/michael_myers.glb",
-    "./models/cash_bundle.glb",
-    "./models/dollars_money_multiple.glb",
-    "./models/stashed_dollars.glb",
-    "./models/direction_arrow_orange.glb",
-  ]);
-  const { ref, actions } = useAnimations(gltfs[0].animations);
+  // const [myers, bundle, dollars, stash, arrow] = useGLTF([
+  //   "/models/michael_myers.glb",
+  //   "/models/cash_bundle.glb",
+  //   "/models/dollars_money_multiple.glb",
+  //   "/models/stashed_dollars.glb",
+  //   "/models/direction_arrow_orange.glb",
+  // ]);
+  const myers = useGLTF("./models/michael_myers.glb");
+  const bundle = useGLTF("./models/cash_bundle.glb");
+  const dollars = useGLTF("./models/dollars_money_multiple.glb");
+  const stash = useGLTF("./models/stashed_dollars.glb");
+  const arrow = useGLTF("./models/direction_arrow_orange.glb");
+  const { ref, actions } = useAnimations(myers.animations);
   const { scene } = useThree();
   const arrowRef = useRef<Group>(null);
   const mediumRef = useRef<Group>(null);
@@ -81,21 +86,21 @@ const HalloweenScene = () => {
           ref={ref}
           scale={0.06}
           position={[22.5, -4, 11]}
-          object={gltfs[0].scene}
+          object={myers.scene}
           rotation-y={-Math.PI / 8}
         />
-        <primitive scale={0.4} position={[-30, 0, 0]} object={gltfs[1].scene} />
+        <primitive scale={0.4} position={[-30, 0, 0]} object={bundle.scene} />
         <Text position={[-30, 1.5, 0]} fontSize={1.25} color="orange">
           $300K
         </Text>
         <group ref={mediumRef} visible={false}>
-          <primitive scale={3.5} position={[0, 0, 0]} object={gltfs[2].scene} />
+          <primitive scale={3.5} position={[0, 0, 0]} object={dollars.scene} />
           <Text position={[0, 2, 0]} fontSize={1.75} color="orange">
             $47M
           </Text>
         </group>
         <group ref={maximumRef} visible={false}>
-          <primitive scale={10} position={[30, 0, 0]} object={gltfs[3].scene} />
+          <primitive scale={10} position={[30, 0, 0]} object={stash.scene} />
           <Text position={[30, 6, 0]} fontSize={2} color="orange">
             {`>$150M`}
           </Text>
@@ -104,7 +109,7 @@ const HalloweenScene = () => {
           ref={arrowRef}
           scale={1.2}
           position={[-22.5, 0, 0]}
-          object={gltfs[4].scene}
+          object={arrow.scene}
         />
       </Stage>
     </>
@@ -114,3 +119,7 @@ const HalloweenScene = () => {
 export default HalloweenScene;
 
 useGLTF.preload("./models/michael_myers.glb");
+useGLTF.preload("./models/cash_bundle.glb");
+useGLTF.preload("./models/dollars_money_multiple.glb");
+useGLTF.preload("./models/stashed_dollars.glb");
+useGLTF.preload("./models/direction_arrow_orange.glb");
